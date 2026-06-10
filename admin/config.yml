@@ -1,0 +1,192 @@
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: "images"
+public_folder: "/images"
+
+locale: "cs"
+
+collections:
+  - name: "texts"
+    label: "Texty webu"
+    files:
+      - name: "content"
+        label: "Veškerý obsah"
+        file: "content/texts.json"
+        format: json
+        fields:
+
+          # ── ENGLISH ────────────────────────────────────
+          - label: "🇬🇧 Angličtina"
+            name: "en"
+            widget: "object"
+            fields:
+              - { label: "Jméno v logu", name: "site_name", widget: "string" }
+
+              - label: "Navigace"
+                name: "nav"
+                widget: "object"
+                fields:
+                  - { label: "O mně", name: "nav_about", widget: "string" }
+                  - { label: "Přístup", name: "nav_approach", widget: "string" }
+                  - { label: "Kontakt", name: "nav_contact", widget: "string" }
+
+              - label: "Hero sekce"
+                name: "hero"
+                widget: "object"
+                fields:
+                  - { label: "Podtitulek nad nadpisem", name: "hero_eyebrow", widget: "string" }
+                  - { label: "Nadpis – 1. řádek", name: "hero_title_line1", widget: "string" }
+                  - { label: "Nadpis – kurzíva (zelená)", name: "hero_title_em", widget: "string" }
+                  - { label: "Nadpis – 3. řádek", name: "hero_title_line2", widget: "string" }
+                  - { label: "Popisný text", name: "hero_sub", widget: "text" }
+                  - { label: "Tlačítko 1", name: "hero_cta1", widget: "string" }
+                  - { label: "Tlačítko 2", name: "hero_cta2", widget: "string" }
+
+              - label: "O mně"
+                name: "about"
+                widget: "object"
+                fields:
+                  - { label: "Nadnápis", name: "about_eyebrow", widget: "string" }
+                  - { label: "Nadpis", name: "about_title", widget: "string" }
+                  - { label: "Odstavec 1", name: "about_p1", widget: "text" }
+                  - { label: "Odstavec 2", name: "about_p2", widget: "text" }
+                  - { label: "Štítek 1", name: "about_cred1", widget: "string" }
+                  - { label: "Štítek 2", name: "about_cred2", widget: "string" }
+                  - { label: "Štítek 3", name: "about_cred3", widget: "string" }
+                  - { label: "Štítek 4", name: "about_cred4", widget: "string" }
+
+              - label: "Přístup / Jak pracuji"
+                name: "approach"
+                widget: "object"
+                fields:
+                  - { label: "Nadnápis", name: "approach_eyebrow", widget: "string" }
+                  - { label: "Nadpis", name: "approach_title", widget: "string" }
+                  - { label: "Popis", name: "approach_sub", widget: "text" }
+                  - { label: "Karta 1 – název", name: "card1_title", widget: "string" }
+                  - { label: "Karta 1 – text", name: "card1_text", widget: "text" }
+                  - { label: "Karta 2 – název", name: "card2_title", widget: "string" }
+                  - { label: "Karta 2 – text", name: "card2_text", widget: "text" }
+                  - { label: "Karta 3 – název", name: "card3_title", widget: "string" }
+                  - { label: "Karta 3 – text", name: "card3_text", widget: "text" }
+
+              - label: "Citáty"
+                name: "quotes"
+                widget: "object"
+                fields:
+                  - { label: "Citát 1 – text", name: "quote1_text", widget: "text" }
+                  - { label: "Citát 1 – autor", name: "quote1_author", widget: "string" }
+                  - { label: "Citát 2 – text", name: "quote2_text", widget: "text" }
+                  - { label: "Citát 2 – autor", name: "quote2_author", widget: "string" }
+                  - { label: "Citát 3 – text", name: "quote3_text", widget: "text" }
+                  - { label: "Citát 3 – autor", name: "quote3_author", widget: "string" }
+
+              - label: "Kontakt"
+                name: "contact"
+                widget: "object"
+                fields:
+                  - { label: "Nadnápis", name: "contact_eyebrow", widget: "string" }
+                  - { label: "Nadpis", name: "contact_title", widget: "string" }
+                  - { label: "Popis", name: "contact_sub", widget: "text" }
+                  - { label: "E-mail", name: "contact_email", widget: "string" }
+                  - { label: "Telefon", name: "contact_phone", widget: "string" }
+                  - { label: "Otevírací hodiny", name: "contact_hours", widget: "string" }
+                  - { label: "Formulář – Jméno", name: "form_name", widget: "string" }
+                  - { label: "Formulář – E-mail", name: "form_email", widget: "string" }
+                  - { label: "Formulář – Zpráva", name: "form_message", widget: "string" }
+                  - { label: "Formulář – Odeslat", name: "form_send", widget: "string" }
+
+              - label: "Patička & ostatní"
+                name: "footer"
+                widget: "object"
+                fields:
+                  - { label: "Text patičky", name: "footer_copy", widget: "string" }
+                  - { label: "Loader slovo", name: "loader_word", widget: "string" }
+
+          # ── SPANISH ────────────────────────────────────
+          - label: "🇪🇸 Španělština"
+            name: "es"
+            widget: "object"
+            fields:
+              - { label: "Jméno v logu", name: "site_name", widget: "string" }
+
+              - label: "Navigace"
+                name: "nav"
+                widget: "object"
+                fields:
+                  - { label: "O mně", name: "nav_about", widget: "string" }
+                  - { label: "Přístup", name: "nav_approach", widget: "string" }
+                  - { label: "Kontakt", name: "nav_contact", widget: "string" }
+
+              - label: "Hero sekce"
+                name: "hero"
+                widget: "object"
+                fields:
+                  - { label: "Podtitulek nad nadpisem", name: "hero_eyebrow", widget: "string" }
+                  - { label: "Nadpis – 1. řádek", name: "hero_title_line1", widget: "string" }
+                  - { label: "Nadpis – kurzíva (zelená)", name: "hero_title_em", widget: "string" }
+                  - { label: "Nadpis – 3. řádek", name: "hero_title_line2", widget: "string" }
+                  - { label: "Popisný text", name: "hero_sub", widget: "text" }
+                  - { label: "Tlačítko 1", name: "hero_cta1", widget: "string" }
+                  - { label: "Tlačítko 2", name: "hero_cta2", widget: "string" }
+
+              - label: "O mně"
+                name: "about"
+                widget: "object"
+                fields:
+                  - { label: "Nadnápis", name: "about_eyebrow", widget: "string" }
+                  - { label: "Nadpis", name: "about_title", widget: "string" }
+                  - { label: "Odstavec 1", name: "about_p1", widget: "text" }
+                  - { label: "Odstavec 2", name: "about_p2", widget: "text" }
+                  - { label: "Štítek 1", name: "about_cred1", widget: "string" }
+                  - { label: "Štítek 2", name: "about_cred2", widget: "string" }
+                  - { label: "Štítek 3", name: "about_cred3", widget: "string" }
+                  - { label: "Štítek 4", name: "about_cred4", widget: "string" }
+
+              - label: "Přístup / Jak pracuji"
+                name: "approach"
+                widget: "object"
+                fields:
+                  - { label: "Nadnápis", name: "approach_eyebrow", widget: "string" }
+                  - { label: "Nadpis", name: "approach_title", widget: "string" }
+                  - { label: "Popis", name: "approach_sub", widget: "text" }
+                  - { label: "Karta 1 – název", name: "card1_title", widget: "string" }
+                  - { label: "Karta 1 – text", name: "card1_text", widget: "text" }
+                  - { label: "Karta 2 – název", name: "card2_title", widget: "string" }
+                  - { label: "Karta 2 – text", name: "card2_text", widget: "text" }
+                  - { label: "Karta 3 – název", name: "card3_title", widget: "string" }
+                  - { label: "Karta 3 – text", name: "card3_text", widget: "text" }
+
+              - label: "Citáty"
+                name: "quotes"
+                widget: "object"
+                fields:
+                  - { label: "Citát 1 – text", name: "quote1_text", widget: "text" }
+                  - { label: "Citát 1 – autor", name: "quote1_author", widget: "string" }
+                  - { label: "Citát 2 – text", name: "quote2_text", widget: "text" }
+                  - { label: "Citát 2 – autor", name: "quote2_author", widget: "string" }
+                  - { label: "Citát 3 – text", name: "quote3_text", widget: "text" }
+                  - { label: "Citát 3 – autor", name: "quote3_author", widget: "string" }
+
+              - label: "Kontakt"
+                name: "contact"
+                widget: "object"
+                fields:
+                  - { label: "Nadnápis", name: "contact_eyebrow", widget: "string" }
+                  - { label: "Nadpis", name: "contact_title", widget: "string" }
+                  - { label: "Popis", name: "contact_sub", widget: "text" }
+                  - { label: "E-mail", name: "contact_email", widget: "string" }
+                  - { label: "Telefon", name: "contact_phone", widget: "string" }
+                  - { label: "Otevírací hodiny", name: "contact_hours", widget: "string" }
+                  - { label: "Formulář – Jméno", name: "form_name", widget: "string" }
+                  - { label: "Formulář – E-mail", name: "form_email", widget: "string" }
+                  - { label: "Formulář – Zpráva", name: "form_message", widget: "string" }
+                  - { label: "Formulář – Odeslat", name: "form_send", widget: "string" }
+
+              - label: "Patička & ostatní"
+                name: "footer"
+                widget: "object"
+                fields:
+                  - { label: "Text patičky", name: "footer_copy", widget: "string" }
+                  - { label: "Loader slovo", name: "loader_word", widget: "string" }
